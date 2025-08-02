@@ -13,7 +13,6 @@ RLpos-3 is a comprehensive framework that integrates NS-3 network simulation wit
 
 - **Reinforcement Learning Integration**: Seamless integration of TensorFlow Agents with NS-3 through OpenAI Gym interface
 - **3D UAV Positioning**: Support for three-dimensional UAV movement with configurable constraints
-- **Multiple Rate Adaptation Algorithms**: Support for Ideal, Minstrel-HT, LUPO, and Fixed rate algorithms
 - **Building-Aware Propagation**: Realistic signal propagation modeling with building obstacles
 - **Flexible Traffic Models**: Support for both TCP and UDP traffic patterns
 - **Comprehensive Logging**: Detailed logging of observations, actions, rewards, and throughput metrics
@@ -76,17 +75,9 @@ The framework consists of three main components:
 
 1. **Clone the repository and dependencies**:
 ```bash
-mkdir ~/workspace && cd ~/workspace
-git clone https://github.com/yourusername/RLpos-3.git fw-phd
-git clone https://gitlab.inesctec.pt/ruben.m.queiros/ts.git
-git clone https://github.com/rukyr97/rukutils.git
-git clone https://github.com/rukyr97/ns3-ai.git
-cd ~/workspace/ns3-ai && git checkout cmake && cd ..
-git clone https://github.com/rukyr97/ns3-gym.git
-cd ~/workspace/ns3-gym && git checkout app-ns-3.36+ && cd ..
-git clone https://gitlab.com/nsnam/ns-3-dev
-cd ~/workspace/ns-3-dev && git checkout tags/ns-3.38
-```
+
+git clone https://github.com/kamranshafafi/RLpos-3.git 
+
 
 2. **Install Miniconda** (if not already installed):
 Follow instructions at [https://docs.conda.io/en/main/miniconda.html](https://docs.conda.io/en/main/miniconda.html)
@@ -99,7 +90,6 @@ conda activate rlpos3
 
 4. **Install the framework**:
 ```bash
-cd ~/workspace/fw-phd
 pip install -r install/requirements.txt
 bash install/install_script.sh -i
 ```
@@ -175,8 +165,6 @@ The framework uses a JSON configuration file (`config/input.json`) with the foll
 - Building locations
 - WiFi parameters (channel, bandwidth, power)
 - Traffic patterns
-
-See [config/examples/](config/examples/) for sample configurations.
 
 ## Project Structure
 
@@ -277,27 +265,26 @@ If you use this framework in your research, please cite:
   title = {RLpos-3: Reinforcement Learning for UAV Positioning in Wireless Networks},
   year = {2024},
   publisher = {GitHub},
-  url = {https://github.com/yourusername/RLpos-3}
+  url = {https://github.com/yourusername/RLpos-3.git}
+}
+and 
+@misc{shafafi2025frameworkdevelopvalidaterlbased,
+      title={A Framework to Develop and Validate RL-Based Obstacle-Aware UAV Positioning Algorithms}, 
+      author={Kamran Shafafi and Manuel Ricardo and Rui Campos},
+      year={2025},
+      eprint={2502.08787},
+      archivePrefix={arXiv},
+      primaryClass={cs.NI},
+      url={https://arxiv.org/abs/2502.08787}, 
 }
 ```
 
 ## Authors
 
 **Kamran Shafafi**  
-- Email: kamran.shafafi@inesctec.pt
+- Email: kamranshafafi@gmail.com
 - Affiliation: INESC TEC
 
-## Acknowledgments
-
-This project builds upon and acknowledges:
-
-- **Eduardo Almeida** - Code contributions
-- **Dr. Hélder Fontes** - Technical discussions
-- **Prof. Dr. Rui Campos** - Supervision and guidance
-- **Prof. Dr. José Ruela** - Technical discussions
-- **Rúben Queirós** - Original framework developer (ruben.m.queiros@inesctec.pt)
-- All MSc students who have used and contributed to this framework
-- The WiN research group at INESC TEC
 
 ### Third-Party Libraries
 
