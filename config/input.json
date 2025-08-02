@@ -1,0 +1,207 @@
+{   
+    "StartScript": {
+        "start": "agent",
+        "debugLevel": "INFO",
+        "simFile": "sim"
+    },
+    "Agent": {
+        "newPolicy": false,
+        "logSteps": true,
+        "actionDebug": false,
+        "debugLevel": "INFO",
+        "simType": "train",
+        "dir": "",
+        "hyperParameters": {
+            "fullyConnectedLayer": "64,32",
+            "numEvalEpisodes": 1,
+            "numTrainEpisodes": 10,
+            "replayBufferMaxLength": 1000000,
+            "batchSize": 64,
+            "learningRate": 0.001,
+            "discount": 0.5,
+            "epsilon": {
+                "decaySteps": 20000,
+                "finalValue": 0.1,
+                "evalValue": 0
+            }
+        }
+    },
+    
+    "Gym": {
+        "logLevels": {
+            "ERROR": true,
+            "WARN": true,
+            "INFO": true,
+            "DEBUG": true
+        },
+        "bypass": false,        
+        "decisionInterval": 0.1,   
+              
+        "venueSize" :{
+            "Xmin": -50,
+            "Xmax": 50,
+            "Ymin": -50,
+            "Ymax": 50,
+            "Zmin": 25,
+            "Zmax":100,
+            "gridResolution": 1
+        }        
+    },
+
+    "ns3Sim": {
+        "logLevels": {
+            "ERROR": true,
+            "WARN": true,
+            "INFO": true,
+            "DEBUG": false
+        },
+        "defaultValues": { 
+            "openGymPort": 5555, 
+            "simSeed": 1,
+            "channelBW": 160,
+            "GuardInterval": 800,
+            "wifiChannelNumber": 50,
+            "PN": -85,
+            "antennaGain": 0.0,
+            "txpower": 20.0,            
+            "simRun": 1, 
+            "simDuration": 100,            
+            "UENodes": [
+                { 
+                    "positionVector": [-15.0, -30.0, 1.0],
+                    "SNR": 11.0,
+                    "DataRate": "58.5Mbps"
+                },
+                {
+                    "positionVector": [-40.0, 0.0, 1.0],
+                    "SNR": 11.0,
+                    "DataRate": "58.5Mbps"
+                },
+                {
+                    "positionVector": [40.0, 20.0, 1.0],
+                    "SNR": 11.0,
+                    "DataRate": "58.5Mbps"
+                },
+                {
+                    "positionVector": [-16.0, 25.0, 1.0],
+                    "SNR": 14.0,
+                    "DataRate": "117Mbps"
+                },
+                { 
+                    "positionVector": [16.0, 25.0, 1.0],
+                    "SNR": 14.0,
+                    "DataRate": "117Mbps"
+                },
+                {
+                    "positionVector": [40.0, -20.0, 1.0],
+                    "SNR": 11.0,
+                    "DataRate": "58.5Mbps"
+                },
+                {
+                    "positionVector": [-10.0, 20.0, 1.0],
+                    "SNR": 14.0,
+                    "DataRate": "117Mbps"
+                },
+                {
+                    "positionVector": [-10.0, -20.0, 1.0],
+                    "SNR": 14.0,
+                    "DataRate": "117Mbps"
+                },
+                { 
+                    "positionVector": [10.0, 20.0, 1.0],
+                    "SNR": 14.0,
+                    "DataRate": "117Mbps"
+                },
+                {
+                    "positionVector": [10.0, -20.0, 1.0],
+                    "SNR": 14.0,
+                    "DataRate": "117Mbps"
+                },
+                {
+                    "positionVector": [-30.0, -15.0, 1.0],
+                    "SNR": 11.0,
+                    "DataRate": "58.5Mbps"
+                },
+                {
+                    "positionVector": [30.0, 15.0, 1.0],
+                    "SNR": 11.0,
+                    "DataRate": "58.5Mbps"
+                }
+            ],            
+            "UAVNodes": [
+                {
+                    "positionVector": [0, 0, 25]
+                }
+            ],
+            "Buildings": [
+                {
+                    "BuildingPosition": [-5.0, 5.0, -5.0, 5.0, 0.0, 20.0, 5, 3, 2]  
+                },
+                {
+                    "BuildingPosition": [-5.0, 5.0, 20.0, 30.0, 0.0, 15.0, 4, 3, 2]
+                },
+                {
+                    "BuildingPosition": [-5.0, 5.0, -30.0, -20.0, 0.0, 15.0, 4, 3, 2]
+                },
+                {
+                    "BuildingPosition": [-35.0, -25.0, -5.0, 5.0, 0.0, 20.0, 5, 3, 2]
+                },
+                {
+                    "BuildingPosition": [-35.0, -25.0, 20.0, 30.0, 0.0, 20.0, 5, 3, 2]
+                },
+                {
+                    "BuildingPosition": [-35.0, -25.0, -30.0, -20.0, 0.0, 15.0, 4, 3, 2]
+                },
+                {
+                    "BuildingPosition": [25.0, 35.0, -5.0, 5.0, 0.0, 20.0, 5, 3, 2 ]
+                },
+                {
+                    "BuildingPosition": [25.0, 35.0, 20.0, 30.0, 0.0, 15.0, 4, 3, 2]
+                },
+                {
+                    "BuildingPosition": [25.0, 35.0, -30.0, -20.0, 0.0, 15.0, 4, 3, 2]
+                }
+            ]
+        },
+        "configSim": {      
+            "mobilityModel": "const",
+            "enableGym": true,
+            "path": "/scratch/fw-phd/",    
+            "RemotStManager": "id",
+            "wifiStandard": "WIFI_STANDARD_80211ac",
+            "trafficProtocol": "udp",
+            "fixedMCS":2,
+            "UAV_directions":[
+                "left",
+                "right",
+                "down",
+                "up",
+                "back",
+                "front",
+                "same"
+            ],           
+            "htDataRates": [
+                "HtMcs0",
+                "HtMcs1",
+                "HtMcs2",
+                "HtMcs3",
+                "HtMcs4",
+                "HtMcs5",
+                "HtMcs6",
+                "HtMcs7"
+            ],
+            "vhtDataRates": [
+                "VhtMcs0",
+                "VhtMcs1",
+                "VhtMcs2",
+                "VhtMcs3",
+                "VhtMcs4",
+                "VhtMcs5",
+                "VhtMcs6",
+                "VhtMcs7",
+                "VhtMcs8",
+                "VhtMcs9"
+            ]
+        }
+    }
+}

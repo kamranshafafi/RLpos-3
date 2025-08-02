@@ -1,0 +1,115 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+.venv
+
+# Virtual environments
+venv/
+ENV/
+env/
+.conda/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# NS-3 specific
+*.pcap
+*.tr
+*.xml
+*.mob
+*.routes
+
+# Build files
+build/
+*.o
+*.a
+*.so
+*.d
+
+# Results and logs (you might want to keep some of these)
+results/
+*.log
+*.csv
+checkpoint/
+*.ckpt
+*.pth
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# Configuration files with sensitive data
+config/config.json
+config/input.json.local
+
+# Large data files
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Documentation build files
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
