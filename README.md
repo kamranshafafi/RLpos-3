@@ -260,14 +260,6 @@ Please read [docs/contributing.md](docs/contributing.md) for detailed guidelines
 If you use this framework in your research, please cite:
 
 ```bibtex
-@software{rlpos3_2024,
-  author = {Shafafi, Kamran},
-  title = {RLpos-3: Reinforcement Learning for UAV Positioning in Wireless Networks},
-  year = {2024},
-  publisher = {GitHub},
-  url = {https://github.com/yourusername/RLpos-3.git}
-}
-and 
 @misc{shafafi2025frameworkdevelopvalidaterlbased,
       title={A Framework to Develop and Validate RL-Based Obstacle-Aware UAV Positioning Algorithms}, 
       author={Kamran Shafafi and Manuel Ricardo and Rui Campos},
